@@ -7,3 +7,9 @@ h1{
 body{
     background-color: #ecebe0;
 }
+.container{
+    width: 80%;
+}
+div{
+    background-color: red;
+}
