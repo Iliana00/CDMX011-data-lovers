@@ -1,26 +1,21 @@
-// estas funciones son de ejemplo
 import data from './data/ghibli/ghibli.js';
 
 const studioGhibli = {
 
   films : function(){
-    let title = [];
+    const title = [];
     for(let i=0; i < data.films.length; i++){
-      title.push(data.films[i].title);    
+      title.push(data.films[i].title);
     }
-    return title
+    return title;
   },
   posters : function  (){
-    let poster = [];
+    const poster = [];
     for(let i = 0; i < data.films.length; i++){
-      poster.push(data.films[i].poster)
+      poster.push(data.films[i].poster);
     }
-    return poster
+    return poster;
   }
 };
-
-/*export const anotherExample = () => {
-  return 'OMG';
-};*/
 
 export default studioGhibli
