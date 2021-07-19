@@ -1,15 +1,42 @@
 *{
-    padding: 0;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 h1{
     text-align: center;
+    padding: 20px;
 }
 body{
     background-color: #ecebe0;
 }
 .container{
     width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: aliceblue;
+    align-items: stretch;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
 }
-div{
-    background-color: red;
+.item{
+    padding: 5px;
+    margin: 5px;
+    flex: 20%;
+    border: solid;    
+    font-size: large;
 }
+.img{
+    height: 15em;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .item {
+        flex: 100%;
+        /*flex-grow: 1;
+        flex-shrink: 1;*/
+    }
+  }
