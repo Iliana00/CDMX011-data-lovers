@@ -16,18 +16,27 @@ body{
     flex-wrap: wrap;
     text-align: center;
     background-color: aliceblue;
-    align-items: center;
+    align-items: stretch;
     margin: auto;
+    justify-content: center;
+    padding: 10px;
 }
 .item{
-    width: 50px;
-    padding: 10px;
-    flex: 25%;
+    padding: 5px;
+    margin: 5px;
+    flex: 20%;
+    border: solid;    
+    font-size: large;
 }
-
+.img{
+    height: 15em;
+    padding: 10px;
+}
 
 @media (max-width: 800px) {
     .item {
-      flex: 100%;
+        flex: 100%;
+        /*flex-grow: 1;
+        flex-shrink: 1;*/
     }
   }
