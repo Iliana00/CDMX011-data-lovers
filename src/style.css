@@ -1,15 +1,33 @@
 *{
-    padding: 0;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 h1{
     text-align: center;
+    padding: 20px;
 }
 body{
     background-color: #ecebe0;
 }
 .container{
     width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: aliceblue;
+    align-items: center;
+    margin: auto;
 }
-div{
-    background-color: red;
+.item{
+    width: 50px;
+    padding: 10px;
+    flex: 25%;
 }
+
+
+@media (max-width: 800px) {
+    .item {
+      flex: 100%;
+    }
+  }
