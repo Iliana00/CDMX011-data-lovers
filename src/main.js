@@ -1,4 +1,5 @@
 import studioGhibli from './data.js';
+import { director } from './data.js';
 
 let films = studioGhibli.films();
 let posters = studioGhibli.posters();
@@ -21,3 +22,4 @@ for (let i = 0; i < posters.length; i++) {
     myDivs[i].appendChild(img).className = "img";
 }
 
+console.log(director());

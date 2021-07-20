@@ -37,8 +37,8 @@ body{
 .title{
     font-size: 1.5em;
 }
-/*@media (max-width: 800px) {
-    .item {
-        flex-basis: 100px;
-    }
-  }*/
+.firstFilter{
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 2em;
+}
