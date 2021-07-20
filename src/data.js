@@ -1,5 +1,6 @@
 import data from './data/ghibli/ghibli.js';
 
+
 const studioGhibli = {
 
   films : function(){

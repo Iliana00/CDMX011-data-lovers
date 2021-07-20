@@ -1,6 +1,12 @@
 import studioGhibli from './data.js';
 import { director } from './data.js';
 
+let select= document.getElementById("firstFilter")
+select.addEventListener("change",function(e){
+    console.log(e.target.value)
+})
+
+
 let films = studioGhibli.films();
 let posters = studioGhibli.posters();
 let container = document.getElementById('container');
@@ -23,3 +29,4 @@ for (let i = 0; i < posters.length; i++) {
 }
 
 console.log(director());
+
