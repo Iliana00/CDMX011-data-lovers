@@ -8,7 +8,7 @@ let container = document.getElementById('container');
 for (let i = 0; i < films.length; i++) {
     const myDiv = document.createElement('div');
     const paragraph = document.createElement('p');
-    myDiv.appendChild(paragraph)
+    myDiv.appendChild(paragraph).className = "title"
     paragraph.textContent = films[i];
     container.appendChild(myDiv).className = "item";    
 }

@@ -18,25 +18,27 @@ body{
     background-color: aliceblue;
     align-items: stretch;
     margin: auto;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px;
 }
 .item{
     padding: 5px;
     margin: 5px;
-    flex: 20%;
+    flex-basis: 150px;
     border: solid;    
-    font-size: large;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
 }
 .img{
     height: 15em;
     padding: 10px;
 }
-
-@media (max-width: 800px) {
+.title{
+    font-size: 1.5em;
+}
+/*@media (max-width: 800px) {
     .item {
-        flex: 100%;
-        /*flex-grow: 1;
-        flex-shrink: 1;*/
+        flex-basis: 100px;
     }
-  }
+  }*/
