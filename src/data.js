@@ -16,6 +16,20 @@ const studioGhibli = {
     }
     return poster;
   }
+
+
 };
 
-export default studioGhibli
+export default studioGhibli;
+
+export const director = () => {
+  const array = data.films.map(movie => {
+    return {
+      title: movie.title,
+      director: movie.director,
+      poster: movie.poster
+    };
+    });
+  console.log(array);
+  return array;
+};
