@@ -1,9 +1,31 @@
 import { home } from './data.js';
-
+import { score } from './data.js';
 
 document.getElementById("firstFilter")
-    .addEventListener("change", function (e) {
-        console.log(e.target.value);
+    .addEventListener("change", function prueba (e) {
+        var answer = "";
+        switch(e.target.value) {            
+            case "mejor-val":   
+            answer = "Hola Crayola";
+            break;
+            case "menor-val":  
+            answer = "Hola Crayolakj";
+            break;
+            case "reciente":  
+            answer = "Hola Crayolakjbf";
+            break;
+            case "antiguo":  
+            answer = "Hola Crayolakjdcvsd";
+            break;
+            case "a-z":  
+            answer = "Hola Crayolakjsdfg";
+            break;
+            case "z-a":  
+            answer = "Hola Crayolakjfbfhers";
+            break;
+        }
+        console.log(answer);
+        return answer;        
 })
 
 let myDiv = null;
@@ -27,6 +49,8 @@ for (let i = 0; i < home().length; i++) {
     document.getElementsByClassName("item")[i]
         .appendChild(img).className = "img";
 }
+
+//console.log(score)
 
 /*for (let i = 0; i < Object.keys(home()).length; i++) {
     console.log(home()[i].title);
