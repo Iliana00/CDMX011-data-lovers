@@ -8,7 +8,7 @@ document.getElementById("firstFilter")
 
 let myDiv = null;
 let paragraph = null;
-for (let i = 0; i < Object.keys(home()).length; i++) {
+for (let i = 0; i < home().length; i++) {
     myDiv = document.createElement('div');
     paragraph = document.createElement('p');
     myDiv.appendChild(paragraph).className = "title";
@@ -19,7 +19,7 @@ for (let i = 0; i < Object.keys(home()).length; i++) {
 
 let img = null;
 let attr = null;
-for (let i = 0; i < Object.keys(home()).length; i++) {
+for (let i = 0; i < home().length; i++) {
     img = document.createElement("img");    
     attr = document.createAttribute("src");
     attr.value = home()[i].poster;
@@ -32,7 +32,7 @@ for (let i = 0; i < Object.keys(home()).length; i++) {
     console.log(home()[i].title);
 }*/
 
-// console.log(home());
-// console.log(Object.keys(home()));
+ //console.log(home());
+ //console.log(home());
 //console.log(director());
 
