@@ -1,21 +1,35 @@
 import data from './data/ghibli/ghibli.js';
 
-const studioGhibli = {
-
-  films : function(){
-    const title = [];
-    for(let i=0; i < data.films.length; i++){
-      title.push(data.films[i].title);
+export const home = () => {
+  const array = data.films.map(movie => {
+    return {
+      title: movie.title,
+      poster: movie.poster,
+      release_date : movie.release_date,
+      rt_score : movie.rt_score      
     }
-    return title;
-  },
-  posters : function  (){
-    const poster = [];
-    for(let i = 0; i < data.films.length; i++){
-      poster.push(data.films[i].poster);
-    }
-    return poster;
-  }
-};
+  })
+  return array;
+}
 
-export default studioGhibli
+export function score(rtScore) {
+  //const rtScore = home().rt_score;
+  return rtScore.sort(function(a, b) {
+    //console.log(rt_score)
+    return a - b;
+  });
+  
+}
+
+
+/*function ascendingOrder(arr) {
+  return arr.sort(function(a, b) {
+    return a - b;
+  });
+}
+ascendingOrder([1, 5, 2, 3, 4]);*/
+
+
+/* export const azfilter{
+   const array = data
+ }*/
