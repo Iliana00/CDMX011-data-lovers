@@ -12,13 +12,31 @@ export const home = () => {
   return array;
 }
 
-export const score = data.films.map(x => x.rt_score)
+//export const score = data.films.map(x => x.rt_score)
 
-export function ascendingOrder (score) {
+/*export function ascendingOrder (score) {
   return score.sort(function(a, b) {
     return a - b;
   });
+}*/
+
+export function order(unordered, ascOrDesc) {
+  if (unordered == "score") {
+    unordered = data.films.map(x => x.rt_score);
+  } else {
+    unordered = data.films.map(x => x.release_date);
+  }
+  if (ascOrDesc == "asc") {
+    return unordered.sort(function (a, b) {
+      return a - b;
+    });
+  } else {
+    return unordered.sort(function (a, b) {
+      return b - a;
+    });
+  }
 }
+
 //console.log("ascendingOrder")
 
 /*

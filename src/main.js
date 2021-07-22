@@ -1,23 +1,33 @@
 import { home } from './data.js';
-import { score } from './data.js';
-import { ascendingOrder } from './data.js';
+//import { score } from './data.js';
+import { order } from './data.js';
 
 
 document.getElementById("firstFilter")
     .addEventListener("change", function prueba (e) {
         var answer = "";
+        let ascOrDesc = "";
+        let unordered = "";
         switch(e.target.value) {            
             case "mejor-val":   
-            answer = ascendingOrder(score);
+            ascOrDesc = "asc";
+            unordered = "score";
+            answer = order(unordered, ascOrDesc);
             break;
-            case "menor-val":  
-            answer = "Hola Crayolakj";
+            case "menor-val":
+            ascOrDesc = "desc";
+            unordered = "score";
+            answer = order(unordered, ascOrDesc);
             break;
             case "reciente":  
-            answer = "Hola Crayolakjbf";
+            ascOrDesc = "desc";
+            unordered = "year";
+            answer = order(unordered, ascOrDesc);
             break;
             case "antiguo":  
-            answer = "Hola Crayolakjdcvsd";
+            ascOrDesc = "asc";
+            unordered = "year";
+            answer = order(unordered, ascOrDesc);
             break;
             case "a-z":  
             answer = "Hola Crayolakjsdfg";
