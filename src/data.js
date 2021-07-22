@@ -12,6 +12,16 @@ export const home = () => {
   return array;
 }
 
+export const score = data.films.map(x => x.rt_score)
+
+export function ascendingOrder (score) {
+  return score.sort(function(a, b) {
+    return a - b;
+  });
+}
+//console.log("ascendingOrder")
+
+/*
 export function score(rtScore) {
   //const rtScore = home().rt_score;
   return rtScore.sort(function(a, b) {
@@ -20,7 +30,7 @@ export function score(rtScore) {
   });
   
 }
-
+*/
 
 /*function ascendingOrder(arr) {
   return arr.sort(function(a, b) {
