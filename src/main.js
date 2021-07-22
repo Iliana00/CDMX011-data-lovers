@@ -30,10 +30,14 @@ document.getElementById("firstFilter")
             answer = order(unordered, ascOrDesc);
             break;
             case "a-z":  
-            answer = "Hola Crayolakjsdfg";
+            ascOrDesc = "asc";
+            unordered = "title";
+            answer = order(unordered, ascOrDesc);
             break;
             case "z-a":  
-            answer = "Hola Crayolakjfbfhers";
+            ascOrDesc = "desc";
+            unordered = "title";
+            answer = order(unordered, ascOrDesc);
             break;
         }
         console.log(answer);
@@ -42,14 +46,23 @@ document.getElementById("firstFilter")
 
 
 let myDiv = null;
-let paragraph = null;
+let title = null;
+let score = null;
+let date = null;
 for (let i = 0; i < home().length; i++) {
     myDiv = document.createElement('div');
-    paragraph = document.createElement('p');
-    myDiv.appendChild(paragraph).className = "title";
-    paragraph.textContent = home()[i].title;
     document.getElementById('container')
         .appendChild(myDiv).className = "item";
+    title = document.createElement('p');
+    myDiv.appendChild(title).className = "title";
+    title.textContent = home()[i].title;
+    date = document.createElement('p');
+    myDiv.appendChild(date).className = "date";
+    date.textContent = home()[i].release_date;
+    score = document.createElement('p');
+    myDiv.appendChild(score).className = "score";
+    score.textContent = "Rotten tomatoes score: " + home()[i].rt_score;
+    console.log(myDiv);
 }
 
 let img = null;
@@ -69,7 +82,7 @@ for (let i = 0; i < home().length; i++) {
     console.log(home()[i].title);
 }*/
 
- //console.log(home());
+console.log(home());
  //console.log(home());
 //console.log(director());
 
