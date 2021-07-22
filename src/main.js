@@ -1,12 +1,14 @@
 import { home } from './data.js';
 import { score } from './data.js';
+import { ascendingOrder } from './data.js';
+
 
 document.getElementById("firstFilter")
     .addEventListener("change", function prueba (e) {
         var answer = "";
         switch(e.target.value) {            
             case "mejor-val":   
-            answer = "Hola Crayola";
+            answer = ascendingOrder(score);
             break;
             case "menor-val":  
             answer = "Hola Crayolakj";
@@ -27,6 +29,7 @@ document.getElementById("firstFilter")
         console.log(answer);
         return answer;        
 })
+
 
 let myDiv = null;
 let paragraph = null;
@@ -50,7 +53,7 @@ for (let i = 0; i < home().length; i++) {
         .appendChild(img).className = "img";
 }
 
-//console.log(score)
+//console.log(ascendingOrder(score))
 
 /*for (let i = 0; i < Object.keys(home()).length; i++) {
     console.log(home()[i].title);
@@ -59,4 +62,5 @@ for (let i = 0; i < home().length; i++) {
  //console.log(home());
  //console.log(home());
 //console.log(director());
+
 
