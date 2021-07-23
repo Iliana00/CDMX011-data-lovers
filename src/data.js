@@ -14,42 +14,54 @@ export const home = () => {
 }
 
 export function order(unordered, ascOrDesc) {
-  let answer = "No ha hecho nada";
+  let answer = "";
   if (unordered == "score" && ascOrDesc == "asc") {
-    unordered = array;
-    console.log(unordered);
-    answer = array.sort(function (a, b) {
-      return a.rt_score - b.rt_score;
-    });
-  } else if (unordered == "score" && ascOrDesc == "desc") {
-    unordered = array;
-    console.log(unordered);
+    //console.log(unordered);
     answer = array.sort(function (a, b) {
       return b.rt_score - a.rt_score;
     });
+  } else if (unordered == "score" && ascOrDesc == "desc") {
+    //console.log(unordered);
+    answer = array.sort(function (a, b) {
+      return a.rt_score - b.rt_score;
+    });
   } else if (unordered == "year" && ascOrDesc == "asc") {
-    unordered = array;
-    console.log(unordered);
+    //console.log(unordered);
     answer = array.sort(function (a, b) {
       return a.release_date - b.release_date;
     });
   } else if (unordered == "year" && ascOrDesc == "desc") {
-    unordered = array;
-    console.log(unordered);
     answer = array.sort(function (a, b) {
       return b.release_date - a.release_date;
     });
   } else {
-    answer = sortTitle(unordered, ascOrDesc);
-    console.log(answer);
+    if (ascOrDesc == "asc") {
+      answer = array.sort(function(a, b){
+        if(a.title < b.title) {return -1;}
+        if(a.title > b.title) {return 1;}
+        return 0;    
+    })}else if (ascOrDesc == "desc") {
+     answer = array.sort(function(a, b){
+        if(a.title > b.title) {return -1;}
+        if(a.title < b.title) {return 1;}
+        return 0;    
+    }   
+     )}
+
+  
+
+
+
+    //answer = sortTitle(unordered, ascOrDesc);
+    //console.log(answer);
   }
   return answer;
 }
-
+/*
 function sortTitle(unordered, ascOrDesc) {
   let answer = "";
   unordered = array;
-  console.log(unordered);
+  //console.log(unordered);
   if (ascOrDesc == "asc") {
     answer = array.sort();
   } else {
@@ -57,7 +69,7 @@ function sortTitle(unordered, ascOrDesc) {
   }
   return answer
 }
-
+*/
 
 // ------------------------------------------------
 
@@ -79,11 +91,11 @@ if (ascOrDesc == "asc") {
   })
 }*/
 
-function sortTitle(unordered, ascOrDesc) {
+/*function sortTitle(unordered, ascOrDesc) {
   unordered = data.films.map(x => x.title);
   if (ascOrDesc == "asc") {
     return unordered.sort();
   } else {
     return unordered.sort().reverse();
   }
-}
+}*/
