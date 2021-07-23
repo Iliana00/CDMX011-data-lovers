@@ -1,11 +1,6 @@
-import {
-  home
-} from './data.js';
+import { home } from './data.js';
 //import { score } from './data.js';
-import {
-  order
-} from './data.js';
-
+import { order } from './data.js';
 
 document.getElementById("firstFilter")
   .addEventListener("change", function prueba(e) {
@@ -44,14 +39,18 @@ document.getElementById("firstFilter")
         answer = order(unordered, ascOrDesc);
         break;
     }
+      mainScreen(answer)
     return answer;
   })
 
 
-let myDiv = null;
-let title = null;
-let score = null;
-let date = null;
+
+
+
+  let myDiv = null;
+  let title = null;
+  let score = null;
+  let date = null;
 for (let i = 0; i < home().length; i++) {
   myDiv = document.createElement('div');
   document.getElementById('container')
@@ -66,7 +65,6 @@ for (let i = 0; i < home().length; i++) {
   myDiv.appendChild(score).className = "score";
   score.textContent = "Rotten tomatoes score: " + home()[i].rt_score;
 }
-
 let img = null;
 let attr = null;
 for (let i = 0; i < home().length; i++) {
@@ -77,6 +75,43 @@ for (let i = 0; i < home().length; i++) {
   document.getElementsByClassName("item")[i]
     .appendChild(img).className = "img";
 }
+
+  function mainScreen (answer){
+    document.getElementById("container").innerHTML= ""
+
+    for (let i = 0; i < answer.length; i++) {
+      myDiv = document.createElement('div');
+      document.getElementById('container')
+        .appendChild(myDiv).className = "item";
+      title = document.createElement('p');
+      myDiv.appendChild(title).className = "title";
+      title.textContent = answer[i].title;
+      date = document.createElement('p');
+      myDiv.appendChild(date).className = "date";
+      date.textContent = answer[i].release_date;
+      score = document.createElement('p');
+      myDiv.appendChild(score).className = "score";
+      score.textContent = "Rotten tomatoes score: " + answer[i].rt_score;
+      img = document.createElement("img");
+      attr = document.createAttribute("src");
+      attr.value = answer[i].poster;
+      img.setAttributeNode(attr);
+      document.getElementsByClassName("item")[i]
+      .appendChild(img).className = "img";
+    }
+
+/*let img = null;
+let attr = null;
+for (let i = 0; i < home().length; i++) {
+  img = document.createElement("img");
+  attr = document.createAttribute("src");
+  attr.value = home()[i].poster;
+  img.setAttributeNode(attr);
+  document.getElementsByClassName("item")[i]
+    .appendChild(img).className = "img";
+}*/
+    }
+
 
 //console.log(ascendingOrder(score))
 

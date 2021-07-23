@@ -24,7 +24,8 @@ body{
 .item{
     padding: 5px;
     margin: 5px;
-    flex-basis: 150px;
+    width: 200px;
+    /*flex-basis: 165px;*/
     border: solid;    
     justify-content: space-between;
     flex-direction: column;
