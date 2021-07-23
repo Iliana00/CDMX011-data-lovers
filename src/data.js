@@ -13,9 +13,6 @@ export function home() {
 
   return array;
 }
-
-<<<<<<< HEAD
-
 export function order(unordered, ascOrDesc) {  
   console.log(array)  
   if (unordered == "score") {
@@ -30,7 +27,7 @@ export function order(unordered, ascOrDesc) {
   if (ascOrDesc == "asc") {
     return unordered.sort(function (a, b) {
       return a - b;
-=======
+
 export function order(unordered, ascOrDesc) {
   let answer = "No ha hecho nada";
   if (unordered == "score" && ascOrDesc == "asc") {
@@ -38,7 +35,6 @@ export function order(unordered, ascOrDesc) {
     console.log(unordered);
     answer = array.sort(function (a, b) {
       return a.rt_score - b.rt_score;
->>>>>>> bed79318e566436b81f530a4c23684f321f24e97
     });
   } else if (unordered == "score" && ascOrDesc == "desc") {
     unordered = array;

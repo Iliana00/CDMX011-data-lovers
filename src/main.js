@@ -53,7 +53,7 @@ let title = null;
 let score = null;
 let date = null;
 for (let i = 0; i < home().length; i++) {
-<<<<<<< HEAD
+
     myDiv = document.createElement('div');
     document.getElementById('container')
         .appendChild(myDiv).className = "item";
@@ -67,7 +67,7 @@ for (let i = 0; i < home().length; i++) {
     myDiv.appendChild(score).className = "score";
     score.textContent = "Rotten tomatoes score: " + home()[i].rt_score;
     //console.log(myDiv);
-=======
+
   myDiv = document.createElement('div');
   document.getElementById('container')
     .appendChild(myDiv).className = "item";
@@ -80,7 +80,7 @@ for (let i = 0; i < home().length; i++) {
   score = document.createElement('p');
   myDiv.appendChild(score).className = "score";
   score.textContent = "Rotten tomatoes score: " + home()[i].rt_score;
->>>>>>> bed79318e566436b81f530a4c23684f321f24e97
+
 }
 
 let img = null;
@@ -99,14 +99,10 @@ for (let i = 0; i < home().length; i++) {
 /*for (let i = 0; i < Object.keys(home()).length; i++) {
     console.log(home()[i].title);
 }*/
-
-<<<<<<< HEAD
 //console.log(home());
  //console.log(home());
 //console.log(director());
 
-=======
->>>>>>> bed79318e566436b81f530a4c23684f321f24e97
 
 //console.log(home());
 //console.log(director());
