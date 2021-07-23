@@ -62,7 +62,7 @@ for (let i = 0; i < home().length; i++) {
     score = document.createElement('p');
     myDiv.appendChild(score).className = "score";
     score.textContent = "Rotten tomatoes score: " + home()[i].rt_score;
-    console.log(myDiv);
+    //console.log(myDiv);
 }
 
 let img = null;
@@ -82,7 +82,7 @@ for (let i = 0; i < home().length; i++) {
     console.log(home()[i].title);
 }*/
 
-console.log(home());
+//console.log(home());
  //console.log(home());
 //console.log(director());
 

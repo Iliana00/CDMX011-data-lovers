@@ -1,8 +1,8 @@
 import data from './data/ghibli/ghibli.js';
 
 let array = [];
-export const home = () => {
-  array = data.films.map(movie => {
+export function home() {
+   array = data.films.map(movie => {
     return {
       title: movie.title,
       poster: movie.poster,
@@ -10,16 +10,20 @@ export const home = () => {
       rt_score : movie.rt_score      
     }
   })
+
   return array;
 }
 
-export function order(unordered, ascOrDesc) {
+
+export function order(unordered, ascOrDesc) {  
+  console.log(array)  
   if (unordered == "score") {
-    unordered = data.films.map(x => x.rt_score);
+    unordered = home(x => x.rt_score);
+    console.log(unordered)
   } else if (unordered == "year") {
-    unordered = data.films.map(x => x.release_date);
+    unordered = array.rt_score;//(x => x.release_date);
   } else {
-    unordered = data.films.map(x => x.title);
+    unordered = array.title;//a.films.map(x => x.title);
     return sortTitle(unordered, ascOrDesc);
   }
   if (ascOrDesc == "asc") {
