@@ -12,18 +12,38 @@
     </header>
     <main>
       <div class="f1-Filter">
-        <label for="firstFilter">Ordenar:</label>
+        <label for="firstFilter">Order:</label>
         <select name="firstFilter" id="firstFilter">
-          <option>Selecciona una opción</option>
+          <option>Select an option:</option>
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
-          <option value="mejor-val">Mejor valoración</option>
-          <option value="menor-val">Menor valoración</option>
-          <option value="reciente">Más reciente</option>
-          <option value="antiguo">Más antiguo</option>
+          <option value="highest-rating">Highest-rating score</option>
+          <option value="lowest-rating">Lowest-rating </option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
         </select>
       </div>
-
+      <div class="f2-Filter">
+        <label for="">Filter by:</label>
+        <button class="directors">Directors</button>
+        <div class="list-directors" id="filter-director">          
+          <button id="dir-HaMi">Hayao Miyazaki</button>
+          <button id="dir-IT">Isao Takahata</button>
+          <button id="dir-YK">Yoshifumi Kondō</button>
+          <button id="dir-HiMo">Hiroyuki Morita</button>   
+          <button id="dir-GM">Gorō Miyazaki</button>
+          <button id="dir-HY">Hiromasa Yonebayashi</button>          
+        </div>
+        <label for="">Filter by:</label>
+        <button class="producers">Producers</button>
+        <div class="list-producers" id="filter-producer">          
+          <button id="prod-HY">Hayao Miyazaki</button>
+          <button id="prod-IT">Isao Takahata</button>
+          <button id="prod-TH">Toru Hara</button>
+          <button id="prod-TS">Toshio Suzuki</button>   
+          <button id="prod-YN">Yoshiaki Nishimura</button>        
+        </div>
+      </div>
         <section class="container" id="container">
         </section>
       
