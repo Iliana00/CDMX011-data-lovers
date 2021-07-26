@@ -1,6 +1,6 @@
-import { home } from './data.js';
-//import { score } from './data.js';
 import { order } from './data.js';
+import data from './data/ghibli/ghibli.js';
+import {directorFiltrado} from './data.js';
 
 document.getElementById("firstFilter")
   .addEventListener("change", function prueba(e) {
@@ -8,22 +8,22 @@ document.getElementById("firstFilter")
     let ascOrDesc = "";
     let unordered = "";
     switch (e.target.value) {
-      case "mejor-val":
+      case "highest-rating":
         ascOrDesc = "asc";
         unordered = "score";
         answer = order(unordered, ascOrDesc);
         break;
-      case "menor-val":
+      case "lowest-rating":
         ascOrDesc = "desc";
         unordered = "score";
         answer = order(unordered, ascOrDesc);
         break;
-      case "reciente":
+      case "newest":
         ascOrDesc = "desc";
         unordered = "year";
         answer = order(unordered, ascOrDesc);
         break;
-      case "antiguo":
+      case "oldest":
         ascOrDesc = "asc";
         unordered = "year";
         answer = order(unordered, ascOrDesc);
@@ -44,33 +44,30 @@ document.getElementById("firstFilter")
   })
 
 
-
-
-
   let myDiv = null;
   let title = null;
   let score = null;
   let date = null;
-for (let i = 0; i < home().length; i++) {
+for (let i = 0; i < data.films.length; i++) {
   myDiv = document.createElement('div');
   document.getElementById('container')
     .appendChild(myDiv).className = "item";
   title = document.createElement('p');
   myDiv.appendChild(title).className = "title";
-  title.textContent = home()[i].title;
+  title.textContent = data.films[i].title;
   date = document.createElement('p');
   myDiv.appendChild(date).className = "date";
-  date.textContent = home()[i].release_date;
+  date.textContent = data.films[i].release_date;
   score = document.createElement('p');
   myDiv.appendChild(score).className = "score";
-  score.textContent = "Rotten tomatoes score: " + home()[i].rt_score;
+  score.textContent = "Rotten tomatoes score: " + data.films[i].rt_score;
 }
 let img = null;
 let attr = null;
-for (let i = 0; i < home().length; i++) {
+for (let i = 0; i < data.films.length; i++) {
   img = document.createElement("img");
   attr = document.createAttribute("src");
-  attr.value = home()[i].poster;
+  attr.value = data.films[i].poster;
   img.setAttributeNode(attr);
   document.getElementsByClassName("item")[i]
     .appendChild(img).className = "img";
@@ -98,27 +95,41 @@ for (let i = 0; i < home().length; i++) {
       img.setAttributeNode(attr);
       document.getElementsByClassName("item")[i]
       .appendChild(img).className = "img";
-    }
+    }}
 
-/*let img = null;
-let attr = null;
-for (let i = 0; i < home().length; i++) {
-  img = document.createElement("img");
-  attr = document.createAttribute("src");
-  attr.value = home()[i].poster;
-  img.setAttributeNode(attr);
-  document.getElementsByClassName("item")[i]
-    .appendChild(img).className = "img";
-}*/
-    }
-
-
-//console.log(ascendingOrder(score))
-
-/*for (let i = 0; i < Object.keys(home()).length; i++) {
-    console.log(home()[i].title);
-}*/
-
-
-//console.log(home());
-//console.log(director());
+  function filterDirProd (filtered){
+      if (filtered.target.id == "dir-HaMi"){
+        console.log(directorFiltrado())
+      } else if(filtered.target.id == "dir-IT"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "dir-YK"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "dir-HiMo"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "dir-GM"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "dir-HY"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "prod-IT"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "prod-TH"){
+        console.log("Este director " + filtered.target.id)
+      }else if(filtered.target.id == "prod-TS"){
+        console.log("Este director " + filtered.target.id)
+      }else if(filtered.target.id == "prod-YN"){
+        console.log("Este director " + filtered.target.id)
+      } else if(filtered.target.id == "prod-HY"){
+        console.log("Este director " + filtered.target.id)
+      }
+  }
+document.getElementById("dir-HaMi").addEventListener("click", filterDirProd);
+document.getElementById("dir-IT").addEventListener("click", filterDirProd);
+document.getElementById("dir-YK").addEventListener("click", filterDirProd);
+document.getElementById("dir-HiMo").addEventListener("click", filterDirProd);
+document.getElementById("dir-GM").addEventListener("click", filterDirProd);
+document.getElementById("dir-HY").addEventListener("click", filterDirProd);
+document.getElementById("prod-IT").addEventListener("click", filterDirProd);
+document.getElementById("prod-TH").addEventListener("click", filterDirProd);
+document.getElementById("prod-TS").addEventListener("click", filterDirProd);
+document.getElementById("prod-YN").addEventListener("click", filterDirProd);
+document.getElementById("prod-HY").addEventListener("click", filterDirProd);
