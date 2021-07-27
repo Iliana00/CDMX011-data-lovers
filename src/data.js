@@ -38,6 +38,10 @@ export function order(unordered, ascOrDesc) {
   return answer;
 }
 
-export function directorFiltrado (){
- return data.films.filter(x => x.director =="Hayao Miyazaki")
+export function directorFiltrado (dir){
+  return data.films.filter(x => x.director == dir)
+}
+
+export function productorFiltrado(prod) {
+  return data.films.filter(x => x.producer == prod)
 }
