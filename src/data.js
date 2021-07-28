@@ -38,10 +38,10 @@ export function order(unordered, ascOrDesc) {
   return answer;
 }
 
-export function directorFiltrado (dir){
-  return data.films.filter(x => x.director == dir)
+export function directorFiltrado (array, dir){
+  return array.filter(x => x.director == dir)
 }
 
-export function productorFiltrado(prod) {
-  return data.films.filter(x => x.producer == prod)
+export function productorFiltrado(array, prod) {
+  return array.filter(x => x.producer == prod)
 }
