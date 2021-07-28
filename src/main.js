@@ -10,9 +10,9 @@ document.getElementById("firstFilter")
     let unordered = "";
     switch (e.target.value) {
       case "highest-rating":
-        ascOrDesc = "asc";
-        unordered = "score";
-        answer = order(unordered, ascOrDesc);
+        // ascOrDesc = "asc";
+        // unordered = "score";
+        answer = order("score", "asc");
         break;
       case "lowest-rating":
         ascOrDesc = "desc";
@@ -63,6 +63,7 @@ for (let i = 0; i < data.films.length; i++) {
   myDiv.appendChild(score).className = "score";
   score.textContent = "Rotten tomatoes score: " + data.films[i].rt_score;
 }
+
 let img = null;
 let attr = null;
 for (let i = 0; i < data.films.length; i++) {
