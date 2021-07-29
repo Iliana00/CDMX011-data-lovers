@@ -42,10 +42,10 @@ document.getElementById("firstFilter")
   .addEventListener("change", function prueba(e) {
     switch (e.target.value) {
       case "highest-rating":
-        answer = order(data.films, "score", "asc");
+        answer = order(data.films, "score", "desc");
         break;
       case "lowest-rating":
-        answer = order(data.films, "score", "desc");
+        answer = order(data.films, "score", "asc");
         break;
       case "newest":
         answer = order(data.films, "year", "desc");
@@ -54,10 +54,10 @@ document.getElementById("firstFilter")
         answer = order(data.films, "year", "asc");
         break;
       case "a-z":
-        answer = order(data.films, "title", "asc");
+        answer = order(data.films, "title", "desc");
         break;
       case "z-a":
-        answer = order(data.films, "title", "desc");
+        answer = order(data.films, "title", "asc");
         break;
       case "":
         answer = data.films;
