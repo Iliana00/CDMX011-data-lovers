@@ -3,11 +3,11 @@
 //Ordena las películas. Recibe el arreglo, 
 export function order(array, unordered, ascOrDesc) {
   let answer = "";
-  if (unordered == "score" && ascOrDesc == "asc") {
+  if (unordered == "score" && ascOrDesc == "desc") {
     answer = array.sort(function (a, b) {
       return b.rt_score - a.rt_score;
     });
-  } else if (unordered == "score" && ascOrDesc == "desc") {
+  } else if (unordered == "score" && ascOrDesc == "asc") {
     answer = array.sort(function (a, b) {
       return a.rt_score - b.rt_score;
     });
@@ -20,7 +20,7 @@ export function order(array, unordered, ascOrDesc) {
       return b.release_date - a.release_date;
     });
   } else {
-    if (ascOrDesc == "asc") {
+    if (ascOrDesc == "desc") {
       answer = array.sort(function (a, b) {
         if (a.title < b.title) {
           return -1;
@@ -30,7 +30,7 @@ export function order(array, unordered, ascOrDesc) {
         }
         return 0;
       })
-    } else if (ascOrDesc == "desc") {
+    } else if (ascOrDesc == "asc") {
       answer = array.sort(function (a, b) {
         if (a.title > b.title) {
           return -1;
