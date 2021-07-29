@@ -113,8 +113,8 @@ function createEvent(button) {
 function filterDirProd(filtered) {
   let dirProd = filtered.target.innerHTML;
   if (filtered.target.classList.contains("director")) {
-    mainScreen(directorFiltrado(dirProd));
+    mainScreen(directorFiltrado(data.films, dirProd));
   } else {
-    mainScreen(productorFiltrado(dirProd));
+    mainScreen(productorFiltrado(data.films, dirProd));
   }
 }
