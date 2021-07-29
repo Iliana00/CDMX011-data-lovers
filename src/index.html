@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/9a789f6d2d.js" crossorigin="anonymous"></script>
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div>
-        <h1 id="name" >Studio Ghibli</h1>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#films">Films</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <main>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9a789f6d2d.js" crossorigin="anonymous"></script>
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1 id="name">Studio Ghibli</h1>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#films">Films</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
     <section id="home">
       <div class="sectionImage">
-      <img src="https://i2.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?fit=1200%2C675&ssl=1" alt="Personajes de Studio Ghibli" class="imghome">
+        <img
+          src="https://i2.wp.com/hipertextual.com/wp-content/uploads/2016/02/Mi-vecino-Totoro.jpeg?fit=1200%2C675&ssl=1"
+          alt="Personajes de Studio Ghibli" class="imghome">
       </div>
-      <div class="sectionPresentation"> 
+      <div class="sectionPresentation">
         <h2 class="titleHome">Home</h2>
-        
+
         <q>Esta es una cita</q>
-        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien nisi, placerat non enim eget, molestie vehicula urna. Donec porta urna sit amet facilisis convallis. Nam ac blandit lacus. Phasellus lacinia finibus nisl, quis tincidunt sapien maximus at. Donec vestibulum aliquet placerat. Nulla pharetra auctor tellus, vel consequat nibh malesuada sed. Etiam finibus sollicitudin gravida. Aliquam sed tellus a elit lobortis suscipit ultricies vitae sem. Vivamus vitae lorem neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc vitae volutpat lacus. Aenean urna est, accumsan et quam eget, tincidunt porta nisi. Mauris neque nisi, congue feugiat euismod at, scelerisque sed leo. Nulla vestibulum, mauris quis efficitur aliquam, orci ipsum interdum libero, eu faucibus sapien magna fermentum lacus.</p>
-        
+        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien nisi, placerat non
+          enim eget, molestie vehicula urna. Donec porta urna sit amet facilisis convallis. Nam ac blandit lacus.
+          Phasellus lacinia finibus nisl, quis tincidunt sapien maximus at. Donec vestibulum aliquet placerat. Nulla
+          pharetra auctor tellus, vel consequat nibh malesuada sed. Etiam finibus sollicitudin gravida. Aliquam sed
+          tellus a elit lobortis suscipit ultricies vitae sem. Vivamus vitae lorem neque. Interdum et malesuada fames ac
+          ante ipsum primis in faucibus. Nunc vitae volutpat lacus. Aenean urna est, accumsan et quam eget, tincidunt
+          porta nisi. Mauris neque nisi, congue feugiat euismod at, scelerisque sed leo. Nulla vestibulum, mauris quis
+          efficitur aliquam, orci ipsum interdum libero, eu faucibus sapien magna fermentum lacus.</p>
+
       </div>
     </section>
 
@@ -45,43 +56,46 @@
           <option value="oldest">Oldest</option>
         </select>
       </div>
-      <div class="f2-Filter">
-        <label for="">Filter by:</label>
+      <p>Filter by:</p>
+      <div class="f2-Filter dropdown1">
         <button class="directors">Directors</button>
-        <div class="list-directors" id="filter-director">          
+        <div class="list-directors dropdown-content1" id="filter-director">
           <button id="dir-HaMi" class="button-filter director">Hayao Miyazaki</button>
           <button id="dir-IT" class="button-filter director">Isao Takahata</button>
           <button id="dir-YK" class="button-filter director">Yoshifumi Kondō</button>
-          <button id="dir-HiMo" class="button-filter director">Hiroyuki Morita</button>   
+          <button id="dir-HiMo" class="button-filter director">Hiroyuki Morita</button>
           <button id="dir-GM" class="button-filter director">Gorō Miyazaki</button>
-          <button id="dir-HY" class="button-filter director">Hiromasa Yonebayashi</button>          
+          <button id="dir-HY" class="button-filter director">Hiromasa Yonebayashi</button>
         </div>
-        <label for="">Filter by:</label>
+      </div>
+      <div class="dropdown2 f2-Filter">
         <button class="producers">Producers</button>
-        <div class="list-producers" id="filter-producer">          
+        <div class="list-producers dropdown-content2" id="filter-producer">
           <button id="prod-HY" class="button-filter producer">Hayao Miyazaki</button>
           <button id="prod-IT" class="button-filter producer">Isao Takahata</button>
           <button id="prod-TH" class="button-filter producer">Toru Hara</button>
-          <button id="prod-TS" class="button-filter producer">Toshio Suzuki</button>   
-          <button id="prod-YN" class="button-filter producer">Yoshiaki Nishimura</button>        
+          <button id="prod-TS" class="button-filter producer">Toshio Suzuki</button>
+          <button id="prod-YN" class="button-filter producer">Yoshiaki Nishimura</button>
         </div>
       </div>
-        <section class="container" id="container">
-        </section>
-    </section>  
-      
-      
-    </main>  
-    <footer id="footer">
-      <h1 id="contact">Contact</h1>
-      <div class="icons">
-        <a href="https://open.spotify.com/album/5fqlZFKYqvkIe2jdDGt2nl?si=dR1aK2p5TkKqlkkPuZTzBw&dl_branch=1"  target="_blank"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.ghibli.jp/"  target="_blank"><i class="fas fa-link"></i></a>
-        <a href="https://www.netflix.com/es/title/60023642"  target="_blank"><i class="fas fa-film"></i></a>
- 
-      </div>
-    </footer>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+      <section class="container" id="container">
+      </section>
+    </section>
+
+
+  </main>
+  <footer id="footer">
+    <h1 id="contact">Contact</h1>
+    <div class="icons">
+      <a href="https://open.spotify.com/album/5fqlZFKYqvkIe2jdDGt2nl?si=dR1aK2p5TkKqlkkPuZTzBw&dl_branch=1"
+        target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://www.ghibli.jp/" target="_blank"><i class="fas fa-link"></i></a>
+      <a href="https://www.netflix.com/es/title/60023642" target="_blank"><i class="fas fa-film"></i></a>
+
+    </div>
+  </footer>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
