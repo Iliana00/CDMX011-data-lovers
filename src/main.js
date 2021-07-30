@@ -11,6 +11,7 @@ let score = null;
 let date = null;
 let img = null;
 let attr = null;
+let description = null;
 function mainScreen(answer) {
   document.getElementById("container").innerHTML = "";
 
@@ -21,7 +22,10 @@ function mainScreen(answer) {
     title = document.createElement('p');
     myDiv.appendChild(title).className = "title";
     title.textContent = answer[i].title;
-    date = document.createElement('p');
+    description = document.createElement('p');
+    myDiv.appendChild(description).className = "description";
+    description.textContent = answer[i].description;
+    date = document.createElement('p'); 
     myDiv.appendChild(date).className = "date";
     date.textContent = answer[i].release_date;
     score = document.createElement('p');
