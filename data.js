@@ -1,4 +1,3 @@
-//import data from './data/ghibli/ghibli.js';
 
 //Ordena las películas. Recibe el arreglo, 
 export function order(array, unordered, ascOrDesc) {
@@ -52,3 +51,6 @@ export function directorFiltrado (array, dir){
 export function productorFiltrado(array, prod) {
   return array.filter(x => x.producer == prod);
 }
+/*export function description(){
+  console.log(data.films.map( x => x.description));
+}*/
