@@ -69,8 +69,8 @@ header nav a {
   width: 100%;
   margin: auto;
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   color: black;
   text-shadow: 1px 1px 10px white;
   background-color: #6F9454;
@@ -99,6 +99,7 @@ header nav a {
 .sectionPresentation {
   width: 40%;
   margin: auto;
+  font-size: 1.2em;
 }
 
 h1 {
@@ -114,6 +115,95 @@ body {
     /*#fcf8f6 #f4f0ea;*/
   
 }
+.allFilters{
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 2em;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.f1-Filter {
+  /*margin: auto;*/
+  /* margin-bottom: 2em; */
+  align-self: center;
+  width: fit-content;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.f1-Filter select {
+  /*display: inline-block;*/
+  /* margin-top: 50px; */
+  cursor: pointer;
+  padding: 5px 15px;
+  height: 42px;
+  background-color: #f5bdc8;
+  color: black;
+  font-size: 1em;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.f1-Filter select:hover{
+  background: #f0f0f0;
+}
+.f2-Filter{
+    align-self: center;
+    display: flex;
+    margin: 1em;
+}
+#filterBy{
+  align-self: center;
+  font-size: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/* Dropdown */
+.dropdown1,
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+  margin: 0 1em;
+}
+.directors,
+.producers{
+  border: none;
+  background-color: #f5bdc8;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  padding: 0.5em;
+  font-family: 'Source Sans Pro',
+  sans-serif;
+  color: black;
+}
+.dropdown1 div button,
+.dropdown2 div button {
+  font-size: 1.5em;
+  padding: 0.5em;
+  font-family: 'Source Sans Pro',sans-serif;
+  border: none;
+  color: black;
+  display: inline-block;
+  background-color: #f5bdc8;
+}
+.dropdown1 div button:hover,
+.dropdown2 div button:hover,
+.directors:hover,
+.producers:hover {
+  background-color: #C66678;
+}
+.dropdown-content1,
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown2:hover .dropdown-content2,
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+
 .container {
   width: 80%;
   display: flex;
@@ -154,31 +244,6 @@ label {
   font-size: 1.5em;
 }
 
-.f1-Filter {
-  /*margin: auto;*/
-  width: fit-content;
-  margin-bottom: 2em;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.f1-Filter select {
-  /*display: inline-block;*/
-  margin-top: 50px;
-  cursor: pointer;
-  padding: 5px 15px;
-  height: 42px;
-  background: #f0f0f0;
-  color: #7b7b7b;
-  font-size: 1em;
-  color: #999;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  position: relative;
-  transition: all 0.25s ease;
-}
-
 footer a {
   margin: 20px;
   padding: 20px;
@@ -209,47 +274,10 @@ a:visited {
   color: inherit;
 }
 
-q {
+figure {
   display: block;
   text-align: right;
   margin: 20px;
-}
-
-
-/* Dropdown */
-
-.dropdown1,
-.dropdown2 {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown1 button,
-.dropdown2 button {
-  border: none;
-  margin: 1em 4em;
-  color: black;
-  padding: 12px 16px;
-  display: inline-block;
-  font-size: 1em;
-}
-
-.dropdown-content1,
-.dropdown-content2 {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  /* min-width: 160px; */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /* z-index: 1; */
-}
-
-.dropdown2:hover .dropdown-content2 {
-  display: block;
-}
-
-.dropdown1:hover .dropdown-content1 {
-  display: block;
 }
 
 /* .dropdown1:hover button,
@@ -274,5 +302,35 @@ q {
   #name {
     font-size: x-large;
   }
-   
+   .f2-Filter {
+     align-self: center;
+     display: flex;
+     margin: 1em;
+     flex-direction: column;
+     font-size: 0.8em;
+   }
+   .dropdown1,
+   .dropdown2{
+     margin:1em;
+   }
+   .allFilters{
+     flex-direction: column;
+     padding: 2em 0;
+   }
+
+   #home{
+     flex-direction: column;
+     min-width: 100%;
+   }
+   .sectionImage, .sectionPresentation{
+     width: 90%;
+     padding: 1em 0;
+   }
+
+   i,
+   footer a {
+    font-size:2rem;
+    padding: 0.5rem;
+    margin: 0;
+   }
 }
