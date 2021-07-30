@@ -122,7 +122,11 @@ body {
   ;
   border-radius: 10px;
 }
-
+.item:hover {
+  background-color: #C66678;
+  color: black;
+  transition: s;
+ }
 .img {
   height: 15em;
   padding: 10px;
