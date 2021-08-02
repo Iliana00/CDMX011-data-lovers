@@ -1,7 +1,7 @@
 import { order } from './data.js';
 import data from './data/ghibli/ghibli.js';
-import { directorFiltrado } from './data.js';
-import { productorFiltrado } from './data.js';
+import { filteredDir } from './data.js';
+import { filteredProd } from './data.js';
 
 let answer = data.films;
 
@@ -47,7 +47,7 @@ function mainScreen(answer) {
 mainScreen(data.films);
 
 document.getElementById("firstFilter")
-  .addEventListener("change", function prueba(e) {
+  .addEventListener("change", function (e) {
     switch (e.target.value) {
       case "highest-rating":
         answer = order(data.films, "score", "desc");
@@ -89,8 +89,10 @@ function createEvent(button) {
 function filterDirProd(filtered) {
   let dirProd = filtered.target.innerHTML;
   if (filtered.target.classList.contains("director")) {
-    mainScreen(directorFiltrado(data.films, dirProd));
+    mainScreen(filteredDir(data.films, dirProd));
   } else {
-    mainScreen(productorFiltrado(data.films, dirProd));
+    mainScreen(filteredProd(data.films, dirProd));
   }
 }
+
+
