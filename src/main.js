@@ -10,7 +10,8 @@ let title = null;
 let score = null;
 let date = null;
 let img = null;
-let attr = null;
+let src = null;
+let alt = null;
 function mainScreen(answer) {
   document.getElementById("container").innerHTML = "";
 
@@ -28,9 +29,12 @@ function mainScreen(answer) {
     myDiv.appendChild(score).className = "score";
     score.textContent = "Rotten tomatoes score: " + answer[i].rt_score;
     img = document.createElement("img");
-    attr = document.createAttribute("src");
-    attr.value = answer[i].poster;
-    img.setAttributeNode(attr);
+    src = document.createAttribute("src");
+    src.value = answer[i].poster;
+    img.setAttributeNode(src);
+    alt = document.createAttribute("alt");
+    alt.value = answer[i].title + "'s poster";
+    img.setAttributeNode(alt);
     document.getElementsByClassName("item")[i]
       .appendChild(img).className = "img";
   }
