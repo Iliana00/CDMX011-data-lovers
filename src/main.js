@@ -94,5 +94,3 @@ function filterDirProd(filtered) {
     mainScreen(filteredProd(data.films, dirProd));
   }
 }
-
-
