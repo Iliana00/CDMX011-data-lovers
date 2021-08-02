@@ -1,27 +1,28 @@
-import {directorFiltrado, productorFiltrado, order} from '../src/data.js';
-import { unordered, dirMiyazaki, dirTakahata, prodMiyazaki, prodTakahata, scoreAsc, scoreDesc, yearDesc, yearAsc, orderAZ, orderZA} from './data/order.js'
+import {
+  filteredDir, filteredProd, order } from '../src/data.js';
+import { unordered, dirMiyazaki, dirTakahata, prodMiyazaki, prodTakahata, scoreAsc, scoreDesc, yearDesc, yearAsc, orderAZ, orderZA } from './data/order.js'
 
 describe('directorFiltrado', () => {
   it('debería ser una función', () => {
-    expect(typeof directorFiltrado).toBe('function');
+    expect(typeof filteredDir).toBe('function');
   });
     it('debería retornar un arreglo filtrado por Miyazaki', () => {
-      expect(directorFiltrado(unordered, "Hayao Miyazaki")).toEqual(dirMiyazaki);
+      expect(filteredDir(unordered, "Hayao Miyazaki")).toEqual(dirMiyazaki);
     });
     it('debería retornar un arreglo filtrado por Takahata', () => {
-      expect(directorFiltrado(unordered, "Isao Takahata")).toEqual(dirTakahata); 
+      expect(filteredDir(unordered, "Isao Takahata")).toEqual(dirTakahata); 
     });
 });
 
 describe('productorFiltrado', () => {
   it('debería ser una función', () => {
-    expect(typeof productorFiltrado).toBe('function');
+    expect(typeof filteredProd).toBe('function');
   });
     it('debería retornar un arreglo filtrado para el productor Miyazaki', () => {
-      expect(productorFiltrado(unordered, 'Hayao Miyazaki')).toEqual(prodMiyazaki); 
+      expect(filteredProd(unordered, 'Hayao Miyazaki')).toEqual(prodMiyazaki); 
     });
     it('debería retornar un arreglo filtrado por Takahata', () => {
-      expect(productorFiltrado(unordered, 'Isao Takahata')).toEqual(prodTakahata); 
+      expect(filteredProd(unordered, 'Isao Takahata')).toEqual(prodTakahata); 
     });
 });
 
