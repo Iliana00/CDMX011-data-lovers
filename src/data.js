@@ -1,5 +1,5 @@
 //Ordena las películas de acuerdo a los parámetros
-export function order(array, category, ascOrDesc) { //Nombrar los parámetros para después ser variables, como si fueran declaradas previamente, pero al vernir de funciones tienen que ser llamadas como parámetros para así darles un valor
+export function order(array, category, ascOrDesc) { 
   let answer = "";
   //Ordena por números, de ascedente a descendiente y viceversa
    if (category == "score" && ascOrDesc == "desc") {
