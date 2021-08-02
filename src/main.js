@@ -10,6 +10,7 @@ let title = null;
 let score = null;
 let date = null;
 let img = null;
+let description = null;
 let src = null;
 let alt = null;
 function mainScreen(answer) {
@@ -22,7 +23,10 @@ function mainScreen(answer) {
     title = document.createElement('p');
     myDiv.appendChild(title).className = "title";
     title.textContent = answer[i].title;
-    date = document.createElement('p');
+    description = document.createElement('p');
+    myDiv.appendChild(description).className = "description";
+    description.textContent = answer[i].description;
+    date = document.createElement('p'); 
     myDiv.appendChild(date).className = "date";
     date.textContent = answer[i].release_date;
     score = document.createElement('p');
