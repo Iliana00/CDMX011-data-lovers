@@ -1,7 +1,7 @@
 import { order } from './data.js';
 import data from './data/ghibli/ghibli.js';
-import { directorFiltrado } from './data.js';
-import { productorFiltrado } from './data.js';
+import { filteredDir } from './data.js';
+import { filteredProd } from './data.js';
 
 let answer = data.films;
 
@@ -10,8 +10,9 @@ let title = null;
 let score = null;
 let date = null;
 let img = null;
-let attr = null;
 let description = null;
+let src = null;
+let alt = null;
 function mainScreen(answer) {
   document.getElementById("container").innerHTML = "";
 
@@ -32,9 +33,12 @@ function mainScreen(answer) {
     myDiv.appendChild(score).className = "score";
     score.textContent = "Rotten tomatoes score: " + answer[i].rt_score;
     img = document.createElement("img");
-    attr = document.createAttribute("src");
-    attr.value = answer[i].poster;
-    img.setAttributeNode(attr);
+    src = document.createAttribute("src");
+    src.value = answer[i].poster;
+    img.setAttributeNode(src);
+    alt = document.createAttribute("alt");
+    alt.value = answer[i].title + "'s poster";
+    img.setAttributeNode(alt);
     document.getElementsByClassName("item")[i]
       .appendChild(img).className = "img";
   }
@@ -43,7 +47,7 @@ function mainScreen(answer) {
 mainScreen(data.films);
 
 document.getElementById("firstFilter")
-  .addEventListener("change", function prueba(e) {
+  .addEventListener("change", function (e) {
     switch (e.target.value) {
       case "highest-rating":
         answer = order(data.films, "score", "desc");
@@ -85,8 +89,8 @@ function createEvent(button) {
 function filterDirProd(filtered) {
   let dirProd = filtered.target.innerHTML;
   if (filtered.target.classList.contains("director")) {
-    mainScreen(directorFiltrado(data.films, dirProd));
+    mainScreen(filteredDir(data.films, dirProd));
   } else {
-    mainScreen(productorFiltrado(data.films, dirProd));
+    mainScreen(filteredProd(data.films, dirProd));
   }
 }
