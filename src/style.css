@@ -72,7 +72,7 @@ header nav a {
   padding-top: 80px;
   padding-bottom: 80px;
   color: black;
-  text-shadow: 1px 1px 10px white;
+  /* text-shadow: 1px 1px 10px white; */
   background-color: #6F9454;
 }
 .intro {
