@@ -8,6 +8,7 @@ let array = data.films;
 //Función para manipular el DOM y crear tarjetas
 function mainScreen(array) {
   document.getElementById("container").innerHTML = "";
+  document.getElementsByClassName("namesDirProd")[0].innerHTML = "";
   let myDiv = "";
   let title = "";
   let score = "";
@@ -77,7 +78,6 @@ document.getElementById("firstFilter")
     mainScreen(array);
   })
 
-
 // Se crea un bucle para que todos los botones tengan un evento
 const filterButtons = document.getElementsByClassName("button-filter");
 for (let i = 0; i < filterButtons.length; i++) {
@@ -90,7 +90,21 @@ function filterDirProd(e) {
   let dirProd = e.target.innerHTML;
   if (e.target.classList.contains("director")) {
     mainScreen(filteredDir(data.films, dirProd));
+    showDirProd(e);
   } else {
     mainScreen(filteredProd(data.films, dirProd));
-  }
+    showDirProd(e);
+  } 
 }
+
+function showDirProd (e){
+  document.getElementsByClassName("namesDirProd")[0].innerHTML = "";
+  let names = "";
+  names = document.createElement('p');
+  document.getElementsByClassName('namesDirProd')[0]
+    .appendChild(names).className = "names";
+  names.textContent = e.target.textContent;
+  
+}
+
+showDirProd();
