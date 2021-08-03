@@ -8,14 +8,14 @@ let array = data.films;
 //Función para manipular el DOM y crear tarjetas
 function mainScreen(array) {
   document.getElementById("container").innerHTML = "";
-  let myDiv = null;
-  let title = null;
-  let score = null;
-  let date = null;
-  let img = null;
-  let description = null;
-  let src = null;
-  let alt = null;
+  let myDiv = "";
+  let title = "";
+  let score = "";
+  let date = "";
+  let img = "";
+  let description = "";
+  let src = "";
+  let alt = "";
 
   for (let i = 0; i < array.length; i++) {
     myDiv = document.createElement('div');
@@ -45,7 +45,7 @@ function mainScreen(array) {
   }
 }
 //Se llama a la función mainScreen para mostrar todas las tarjetas en la pantalla principal 
-mainScreen(data.films);
+mainScreen(array);
 
 //Se le agrega el escuchador de eventos al select para ordenar películas
 document.getElementById("firstFilter")
@@ -83,12 +83,12 @@ const filterButtons = document.getElementsByClassName("button-filter");
 for (let i = 0; i < filterButtons.length; i++) {
   createEvent(filterButtons[i]);
 } function createEvent(button) {
-  button.addEventListener("click", filterDirProd);
+  button.addEventListener("click", filterDirProd); 
 }
 //Función para mostrar en pantalla al filtrar por director y productor  
-function filterDirProd(filtered) {
-  let dirProd = filtered.target.innerHTML;
-  if (filtered.target.classList.contains("director")) {
+function filterDirProd(e) {
+  let dirProd = e.target.innerHTML;
+  if (e.target.classList.contains("director")) {
     mainScreen(filteredDir(data.films, dirProd));
   } else {
     mainScreen(filteredProd(data.films, dirProd));
