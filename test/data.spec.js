@@ -48,9 +48,6 @@ describe('order', () => {
   it('debería retornar un arreglo ordenado por orden alfabético(Z-A)', () => {
     expect(order(unordered, "title", "asc")).toEqual(orderZA);
   })
-  test('debería retornar un error', () => {
-    expect(() => order()).toThrow('something went wrong');
-  })
 })
 
 

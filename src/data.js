@@ -1,8 +1,8 @@
-//Ordena las películas. Recibe el arreglo, 
-export function order(array, category, ascOrDesc) {
+//Ordena las películas de acuerdo a los parámetros
+export function order(array, category, ascOrDesc) { 
   let answer = "";
-  if (Array.isArray(array)) {
-    if (category == "score" && ascOrDesc == "desc") {
+  //Ordena por números, de ascedente a descendiente y viceversa
+   if (category == "score" && ascOrDesc == "desc") {
       answer = array.sort(function (a, b) {
         return b.rt_score - a.rt_score;
       });
@@ -18,6 +18,7 @@ export function order(array, category, ascOrDesc) {
       answer = array.sort(function (a, b) {
         return b.release_date - a.release_date;
       });
+  //Ordena alfabéticamente, de ascedente a descendiente y viceversa
     } else if (category == "title") {
       if (ascOrDesc == "desc") {
         answer = array.sort(function (a, b) {
@@ -39,21 +40,16 @@ export function order(array, category, ascOrDesc) {
           }
           return 0;
         })
-      }
-    } else {
-      answer = "Something went wrong"
-    }
-  } else {
-    answer = "Something went wrong"
-  }
-  
+      } 
+    } 
   return answer;
-}
+  }
 
+  //Función para filtrar por director
 export function filteredDir (array, dir){
   return array.filter(x => x.director == dir);
 }
-
+  //Función para filtrar por productor
 export function filteredProd (array, prod) {
   return array.filter(x => x.producer == prod);
 }
