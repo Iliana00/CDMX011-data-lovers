@@ -47,7 +47,7 @@
       <div class="f1-Filter">
         <label for="firstFilter">Order:</label>
         <select name="firstFilter" id="firstFilter">
-          <option>Select an option:</option>
+          <option value="">Select an option:</option>
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
           <option value="highest-rating">Highest-rating score</option>
@@ -59,7 +59,7 @@
       <div class="f2-Filter">
 
       <div class="dropdown1">
-        <button class="directors">Filter By Director <i class="fas fa-sort-down"> </i></button>
+        <button class="directors" >Filter By Director <i class="fas fa-sort-down"> </i></button>
         <div class="list-directors dropdown-content1" id="filter-director">
           <button id="dir-HaMi" class="button-filter director">Hayao Miyazaki</button>
           <button id="dir-IT" class="button-filter director">Isao Takahata</button>
@@ -81,7 +81,9 @@
       </div>
       </div>
       </div>
-      <section class="container" id="container">
+      <section >
+      <div class="namesDirProd"></div>  
+      <div class="container" id="container"></div>
       </section>
     </section>
 
@@ -96,8 +98,13 @@
       <a href="https://www.netflix.com/es/title/60023642" target="_blank" aria-label="A Ghibli movie on Netflix"><i class="fas fa-film"></i></a>
 
     </div>
+    <div class="owners">
+      <p id="made">Made by <a href="https://github.com/emmaspace" target="_blank">Emma</a> and <a href="https://github.com/Iliana00" target="_blank">Iliana</a></p>
+      <img class="totoro" src="totoro.png" alt="totoro">
+    </div>
+    
   </footer>
-  <div id="root"></div>
+  
   <script src="main.js" type="module"></script>
 </body>
 

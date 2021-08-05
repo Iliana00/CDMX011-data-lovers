@@ -1,7 +1,7 @@
 //Ordena las películas de acuerdo a los parámetros
 export function order(array, category, ascOrDesc) { 
   let answer = "";
-  //Ordena por números, de ascedente a descendiente y viceversa
+  //Ordena por números, de ascedente a descendente y viceversa
    if (category == "score" && ascOrDesc == "desc") {
       answer = array.sort(function (a, b) {
         return b.rt_score - a.rt_score;
